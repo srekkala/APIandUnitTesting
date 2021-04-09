@@ -1,0 +1,18 @@
+schema{
+	query:Query
+}
+
+type Query {
+	getFlight(id:Int):Flight
+	getAllFlights:[Flight]
+}
+
+
+type Flight {
+	id:Int
+	flightFrom:String
+	flightTo:String
+	date:String
+	fare:Int
+	seatCapacity:Int
+}
