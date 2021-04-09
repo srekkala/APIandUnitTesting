@@ -10,13 +10,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.Flight;
+import com.example.demo.Entity.Passenger;
 import com.example.demo.service.FlightServiceI;
+import com.example.demo.service.PassengerServiceI;
 
 @RestController
 public class RestAPIController {
 	
 	@Autowired 
 	FlightServiceI service;
+	
+	@Autowired
+	PassengerServiceI passService;
 	
 	@PostMapping("/addFlight")
 	public Flight add(@RequestBody Flight flight) {
@@ -31,6 +36,11 @@ public class RestAPIController {
 	@DeleteMapping("deleteFlight/{id}")
 	public String delete(@PathVariable int id) {
 		return service.deleteFlight(id); 
+	}
+	
+	@PostMapping("/addPassenger")
+	public Passenger add(@RequestBody Passenger passenger) {
+		return passService.addPassenger(passenger);
 	}
 	
 }

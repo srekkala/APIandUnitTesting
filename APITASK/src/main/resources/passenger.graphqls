@@ -1,0 +1,11 @@
+
+extend type Query {
+	getAllPassengers:[Passenger]
+	getPassengerById(passengerId:Int): Passenger
+}
+
+
+type Passenger {
+	passengerId:Int
+	passengerName:String
+}

@@ -1,0 +1,10 @@
+query{
+  getAllFlights{
+    id
+    flightFrom
+    flightTo
+    date
+    fare
+    seatCapacity
+  }
+}
