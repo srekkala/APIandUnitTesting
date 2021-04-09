@@ -26,7 +26,7 @@ public class RestAPITest {
 	@Autowired
 	private MockMvc mockMvc;
 
-	public String mapToJson(Object obj) throws JsonProcessingException {
+	protected String mapToJson(Object obj) throws JsonProcessingException {
 		ObjectMapper objectMapper = new ObjectMapper();
 		return objectMapper.writeValueAsString(obj);
 	}
