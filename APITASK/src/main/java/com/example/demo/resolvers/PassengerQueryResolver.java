@@ -10,6 +10,8 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.example.demo.Entity.Passenger;
 import com.example.demo.service.PassengerServiceI;
 
+
+
 @Component
 public class PassengerQueryResolver implements GraphQLQueryResolver{
 
